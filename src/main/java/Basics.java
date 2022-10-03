@@ -144,9 +144,11 @@ public class Basics {
          */
         StringBuilder ret = new StringBuilder(); // StringBuilder makes mutable strings
 
+        String[] split_list = to_split.split(" "); // create array of first char of each word
 
-        // Fill in the rest of the body here
-
+        for (int index = 0; index <= 6; index++){
+            ret.append(split_list[index].charAt(0));
+        }
         return ret.toString();
     }
 
@@ -173,6 +175,10 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+
+        for (int i = 1; i <= arr.length - 1; i = i + 2) {
+            current_sum += arr[i];
+        }
 
         return current_sum;
     }
